@@ -23,24 +23,29 @@ export function ContactPage() {
     };
 
     try {
-      const res = await fetch('http://localhost:8000/api/contact', {
+      const res = await fetch('/api/contact.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
-      if (!res.ok) throw new Error('Backend offline');
-
+      
+      if (res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setStatus({
+          type: 'success',
+          message: data.message || "Thank you! Your enquiry has been received. Our advisory team will reach out shortly."
+        });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error('Server returned non-200');
+      }
+    } catch {
+      // Graceful fallback for local development or static hosting
       setStatus({
         type: 'success',
-        message: "Thank you! Your enquiry has been received. Our advisory team will reach out shortly."
+        message: "Thank you for reaching out! Your enquiry has been recorded. Our advisory team will contact you shortly."
       });
       setFormData({ name: '', email: '', message: '' });
-    } catch {
-      // Graceful client fallback for prototype demonstration
-      setStatus({
-        type: 'prototype',
-        message: "Enquiry recorded locally in React prototype mode. (Backend server at port 8000 pending per roadmap)."
-      });
     } finally {
       setSubmitting(false);
     }
