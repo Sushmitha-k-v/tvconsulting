@@ -88,7 +88,7 @@ export const SITE_CONTENT = {
     role: "Founder & CEO",
     bio: "Bipin brings over two decades of IT experience to TerraVerde Consulting, with a strong focus on sales strategy and business growth. His career includes key roles at global industry leaders such as SAP, as well as several years in the U.S. market early on, which gave him a broad international perspective. A consistent top performer, Bipin thrives on tackling new challenges. As a founding member of the firm, he oversees all operational, strategic, and sales initiatives, driving the organisation forward with a hands-on leadership approach. Beyond the office, Bipin is an avid book reader and a natural mentor — always approachable and ready to help others succeed.",
     linkedin: "#",
-    email: "sales@terraverdeconsulting.com"
+    email: "bipin.s@tvconsulting.in"
   },
 
   milestones: [
@@ -137,7 +137,7 @@ export const SITE_CONTENT = {
     corporate: "TerraVerde Consulting, Mezzanine Floor, 290 (41/2), 11th Cross Road, Wilson Garden, Bangalore - 560027",
     coordinates: { lat: 12.9483335, lng: 77.5981857 },
     other: "No additional offices supplied yet.",
-    media: "sales@terraverdeconsulting.com"
+    media: "bipin.s@tvconsulting.in"
   },
 
   legalSections: [
@@ -157,7 +157,7 @@ export const SITE_CONTENT = {
       id: "grievance",
       kicker: "grievance",
       title: "Grievance Redressal",
-      body: "For compliance questions, stakeholder queries, or grievance redressal, please contact our nodal office directly at sales@terraverdeconsulting.com."
+      body: "For compliance questions, stakeholder queries, or grievance redressal, please contact our nodal office directly at bipin.s@tvconsulting.in."
     }
   ]
 };

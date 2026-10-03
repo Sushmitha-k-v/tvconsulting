@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 
-    $to = "sales@terraverdeconsulting.com";
+    $to = "bipin.s@tvconsulting.in";
     $subject = "New Website Enquiry from: " . $name;
     $body = "New Enquiry received via TerraVerde Consulting website:\n\n" .
             "Full Name: " . $name . "\n" .
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             "Submitted At: " . date('Y-m-d H:i:s T') . "\n\n" .
             "Message:\n" . $message . "\n";
 
-    $host = isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : 'terraverdeconsulting.com';
+    $host = isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : 'tvconsulting.in';
     $headers = "From: noreply@" . $host . "\r\n" .
                "Reply-To: " . $email . "\r\n" .
                "X-Mailer: PHP/" . phpversion();
